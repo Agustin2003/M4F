@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    }
+    .headerContainer {
+    width: 100%;
+    padding: 10px 0;
+    display:
+    flex;
+    justify-content: space-around;
+    border-bottom: 1px solid darkgrey
+    }
+    .headerBlock {
+    text-transform: capitalize;
+}
+    .headerBlock last-child {
+    width: 8%;
+}
