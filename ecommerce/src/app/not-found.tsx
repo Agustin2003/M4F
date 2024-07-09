@@ -14,5 +14,5 @@ export default function PageNotFound() {
           </div>
         </div>
       </section>
-          );
+          ); 
 };

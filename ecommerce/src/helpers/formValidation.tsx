@@ -1,6 +1,6 @@
-import { LoginErrorProps, LoginProps, RegisterErrorProps, RegisterProps } from "@/types";
+import { LoginErrorProps, ILoginUser, RegisterErrorProps, RegisterPropsResponse } from "@/types";
 
-export function validatedateLoginForm (values: LoginProps) {
+export function validatedateLoginForm (values: ILoginUser) {
     let errors: LoginErrorProps = {}
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -14,7 +14,7 @@ export function validatedateLoginForm (values: LoginProps) {
     return errors;
 }
 
-export function validatedateRegisterForm (values: RegisterProps) {
+export function validatedateRegisterForm (values: RegisterPropsResponse) {
     let errors: RegisterErrorProps = {}
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

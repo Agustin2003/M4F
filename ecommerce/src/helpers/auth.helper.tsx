@@ -1,7 +1,7 @@
-import { IProduct,LoginProps,RegisterProps } from "@/types"
+import { IProduct,ILoginUser,RegisterPropsResponse } from "@/types"
 const apiUrl = process.env.NEXT_PUBLIC_API_URL
 
-export async function register(userData: RegisterProps){
+export async function register(userData: RegisterPropsResponse){
     try {
         const res = await fetch(`${apiUrl}/users/register`, {
             method:"POST",
@@ -21,7 +21,7 @@ export async function register(userData: RegisterProps){
     }
 }
 
-export async function login(userData: LoginProps){
+export async function login(userData: ILoginUser){
     try {
         const res = await fetch(`${apiUrl}/users/login`, {
             method:"POST",

@@ -62,8 +62,6 @@ export interface IProduct{
     address: string;
     email: string;
     password: string;
-    role:string;
-    credential:ICredentials;
   }
   
   export interface RegisterErrorProps {
@@ -72,7 +70,6 @@ export interface IProduct{
     address?: string;
     email?: string;
     password?: string;
-    role: string;
   }
 
 

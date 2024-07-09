@@ -34,8 +34,8 @@ export const CartContext = createContext<ICartContextType>({
 const checkout = async (cartItems: IProduct[]) => {
     try {
         const products = cartItems.map((item) => item.id);
-        const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:3001/orders", {
+        const token = typeof window !== "undefined" && localStorage.getItem("token");
+        const response = await fetch("https://m4f.onrender.com/orders", {
             method: "POST",
             headers: {
                 Authorization: `${token}`,
